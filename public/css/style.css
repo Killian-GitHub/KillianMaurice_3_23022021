@@ -1,3 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
 
+p1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+
+.p2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+p3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+
+.guide__manual li {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+.header__img {
+  position: relative;
+  display: block;
+  margin: 20px auto 20px;
+  width: 60%;
+}
+.header__img2 {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.header__logo {
+  position: absolute;
+  color: black;
+  top: 30px;
+  left: 15px;
+  font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 210px;
+  border-style: none;
+  background-color: #353535;
+}
+footer h1 {
+  color: #fff;
+  margin: 0;
+  padding: 15px;
+  font-size: 25px;
+}
+footer .p2 {
+  color: #fff;
+  margin: 0;
+  padding: 0 15px 8px;
+  font-size: 18px;
+}
+footer .footer__logo {
+  color: #fff;
+  float: left;
+  width: 8px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.search {
+  border-style: none;
+  height: 300px;
+  text-align: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  margin: 0;
+}
+.search__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaeaea;
+  box-shadow: inset 0px 5px 5px 0px #dddddd;
+}
+.search__bar_champ {
+  border: none;
+  outline: none;
+  background: #eaeaea;
+  font-size: 1rem;
+  padding: 20px 5px 20px 5px;
+  margin-top: 5px;
+  text-align: center;
+  width: 150px;
+}
+.search .button {
+  display: block;
+  margin: 20px auto 20px;
+  outline: none;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #fff;
+  border-radius: 35px;
+  border-style: none;
+  font-size: 15px;
+  padding: 13px 20px 13px;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #e9e8e8b9;
+}
+
+.guide {
+  border-style: none;
+  height: 350px;
+}
+.guide__manual {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.guide__manual_number {
+  float: left;
+  border-style: none;
+  color: #fff;
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 4px 8px 4px;
+}
+.guide__manual_logo {
+  font-size: 18px;
+  margin-right: 20px;
+  color: #7e7e7e;
+}
+.guide__manual li {
+  list-style-type: none;
+  border-style: none;
+  background-color: f6f6f6;
+  font-size: 14px;
+  text-align: center;
+  width: 80%;
+  border-radius: 20px;
+  padding: 25px 25px 25px 0;
+  margin: 25px auto;
+  box-shadow: 3px 3px 3px 3px #e9e9e9;
+}
+.guide__manual :hover {
+  background-color: #f5edff;
+}
+
+.restaurants {
+  margin: 0;
+  padding: 25px 0 25px;
+  background-color: #f6f6f6;
+}
+.restaurants figure {
+  background-color: #fff;
+  margin: 0 auto 20px;
+  border-style: none;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 90%;
+  box-shadow: 3px 3px 3px 3px #e9e9e9;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.restaurants figure figcaption {
+  padding: 10px;
+  width: 75%;
+}
+.restaurants figure figcaption h2 {
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+.restaurants figure figcaption .p2 {
+  margin-top: 5px;
+}
+.restaurants figure .heart {
+  margin: auto;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.restaurants figure .heart:hover {
+  color: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  font-weight: bold;
+}
+.restaurants figure .new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  color: #008766;
+  background-color: #99e2d0;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.restaurants__img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
+.menu {
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  border-style: none;
+  background-color: #f2f2f2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.menu__heart {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  font-size: 20px;
+}
+.menu ul {
+  padding: 0;
+  width: 90%;
+  margin: auto;
+}
+.menu li {
+  list-style-type: none;
+  border-style: none;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px #e9e9e9;
+  position: relative;
+}
+.menu li h3 {
+  margin: 0px 10px 0px;
+  padding-top: 10px;
+}
+.menu li p {
+  margin: 0px 10px 0px;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 5px 0px 10px;
+}
+.menu li .menu__price {
+  font-weight: bold;
+  position: absolute;
+  margin: 0 10px 0;
+  right: 0;
+  bottom: 0;
+}
+.menu p {
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 5px 10px 20px;
+}
+.menu .button {
+  display: block;
+  margin: 20px auto 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #fff;
+  border-radius: 35px;
+  border-style: none;
+  font-size: 15px;
+  padding: 13px 20px 13px;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #e9e8e8b9;
+}
 
 /*# sourceMappingURL=style.css.map */

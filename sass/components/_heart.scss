@@ -1,0 +1,57 @@
+.heart {
+    font-size: 24px;
+}
+.heart_2 {
+    font-size: 26px;
+    opacity: 0;
+    transform: opacity scale(1);
+    &:hover {
+        background:linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        opacity: 1;
+        animation: heart-opacity 1000ms;
+    }
+}
+
+@keyframes heart-opacity {
+0% {
+    opacity: 0.2;
+}
+10% {
+    opacity: 0.4;
+}
+20% {
+    opacity: 0.6;
+}
+30% {
+    opacity: 0.8;
+}
+40% {
+    opacity: 1;
+}
+50% {
+    opacity: 1;
+}
+60% {
+    opacity: 1;
+    transform: scale(1);
+}
+70% {
+    opacity: 1;
+    transform: scale(1.2);
+}
+80% {
+    opacity: 1;
+    transform: scale(1);
+}
+90% {
+    opacity: 1;
+    transform: scale(1.2);
+}
+100% {
+    opacity: 1;
+    transform: scale(1);
+}
+}

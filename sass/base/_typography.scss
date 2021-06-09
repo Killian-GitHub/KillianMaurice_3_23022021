@@ -1,0 +1,61 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap');
+
+// Font Variables
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'shrikhand', sans-serif;
+
+// Elements
+p {
+    font-family: $font-primary;
+    font-size: 15px;
+}
+
+.menu__title {
+    font-family: $font-primary;
+    font-size: 17px;
+}
+
+.price {
+    font-family: $font-primary;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.index__title {
+    font-family: $font-primary;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer__text {
+    font-family: $font-primary;
+    color: #fff;
+    font-size: 15px;
+}
+
+.guide {
+    &__manual {
+        li {
+            font-family: $font-primary;
+            font-weight: bold;
+        }
+    }
+}
+
+h1 {
+    font-family: $font-secondary;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: $font-primary;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: $font-primary;
+    font-weight: bold;
+    font-size: 18px;
+}

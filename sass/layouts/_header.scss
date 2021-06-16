@@ -1,0 +1,32 @@
+.header {
+    &__img {
+        position: relative;
+        display: block;
+        margin: $center;
+        width: 60%;
+        @include desktop {
+            margin: 50px auto 50px;
+            width: 35%;
+        }
+    }
+    &__img2 {
+        width: $m-width;
+        height: 240px;
+        object-fit: cover;
+        @include desktop {
+            height: 320px;
+        }
+    }
+    &__logo {
+        position: absolute;
+        color: black;
+        top: 32px;
+        left: 18px;
+        font-size: 20px;
+        @include desktop {
+            top: 70px;
+            left: 55px;
+            font-size: 26px;
+        }
+    }
+}

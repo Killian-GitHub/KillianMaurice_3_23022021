@@ -1,18 +1,13 @@
 @import "./base/responsive";
 @import "./base/typography";
-@import "./components/link";
-@import "./components/heart";
 @import "./components/button";
-
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$gradient-color: linear-gradient(to bottom right, $color-secondary, $color-primary);
-
-$shadow: 4px 4px 6px #aaa;
-
-$center: 20px auto 20px;
+@import "./components/heart";
+@import "./components/link";
+@import "./components/loader";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./utils/keyframes";
+@import "./utils/variables";
 
 body {
     margin: 0;
@@ -26,11 +21,11 @@ body {
         width: 60%;
         @include desktop {
             margin: 50px auto 50px;
-            width: 40%;
+            width: 35%;
         }
     }
     &__img2 {
-        width: 100%;
+        width: $m-width;
         height: 240px;
         object-fit: cover;
         @include desktop {
@@ -43,11 +38,16 @@ body {
         top: 32px;
         left: 18px;
         font-size: 20px;
+        @include desktop {
+            top: 70px;
+            left: 55px;
+            font-size: 26px;
+        }
     }
 }
 
 footer {
-    width: 100%;
+    width: $m-width;
     padding-bottom: 30px;
     border-style: none;
     background-color: #353535;
@@ -56,7 +56,7 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    & h1 {
+    & h4 {
         color: #fff;
         margin: 0;
         padding: 15px;
@@ -66,7 +66,7 @@ footer {
             font-size: 30px;
         }
         @include desktop {
-            width: 100%;
+            width: $m-width;
             font-size: 35px;
             margin: 20px auto;
         }
@@ -100,8 +100,8 @@ footer {
     border-style: none;
     height: 300px;
     text-align: center;
-    background-color: #f2f2f2;
-    width: 100%;
+    background-color: $background-color;
+    width: $m-width;
     margin: 0;
     padding-bottom: 30px;
     @include tablet {
@@ -161,15 +161,15 @@ footer {
             border-style: none;
             color: #fff;
             background-color: #9356DC;
-            border-radius: 100%;
+            border-radius: $m-width;
             padding: 4px 8px 4px;
             position: relative;
             left: -10px;
         }
         &_logo {
             font-size: 18px;
-            margin-left: 10%;
-            margin-right: 20px;
+            margin-left: 8%;
+            margin-right: 16px;
             color: #7e7e7e;
         }
         & li {
@@ -202,7 +202,7 @@ footer {
     max-width: 1400px;
     display: block;
     padding: 25px 25px;
-    background-color: #f6f6f6;
+    background-color: $background-color;
     @include tablet {
         display: flex;
         flex-wrap: wrap;
@@ -214,7 +214,7 @@ footer {
     }
     .index__title {
         @include tablet {
-            width: 100%;
+            width: $m-width;
             margin-bottom: 35px;
         }
     }
@@ -240,7 +240,7 @@ footer {
                 margin: 10px 0 0;
             }
             p {
-                margin: 8px 0 10px;
+                margin: 8px 0 0;
             }
         }
         .heart {
@@ -248,10 +248,10 @@ footer {
             right: 10%;
             bottom: 15%;
         }
-        .heart_2 {
+        .heart-container {
             position: absolute;
-            right: 9.9%;
-            bottom: 14.5%;
+            right: 10%;
+            bottom: 15%;
         }
         .new {
             position: absolute;
@@ -266,7 +266,7 @@ footer {
     }
     &__img {
         object-fit: cover;
-        width: 100%;
+        width: $m-width;
         height: 180px;
     }
 }
@@ -275,32 +275,37 @@ footer {
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
     border-style: none;
-    background-color: #f2f2f2;
+    background-color: $background-color;
     padding: 20px;
     position: relative;
     top: -30px;
     margin-bottom: -28px;
     @include desktop {
-        padding: 20px 15%;
+        padding: 20px 10%;
     }
     & h1 {
         font-size: 29px;
+        @include desktop {
+            font-size: 40px;
+        }
     }
     .heart {
         position: absolute;
-        top: 52px;
+        top: 51px;
         right: 34px;
         @include desktop {
-            right: 20%;
+            top: 65px;
+            right: 11%;
         }
     }
-    .heart_2 {
+    .heart-container {
         position: absolute;
         top: 51px;
-        right: 33px;
+        right: 34px;
         cursor: pointer;
         @include desktop {
-            right: 20%;
+            top: 65px;
+            right: 11%;
         }
     }
     & ul {
@@ -308,6 +313,10 @@ footer {
         animation: fadein 4s;
         -moz-animation: fadein 4s;
         -webkit-animation: fadein 4s;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
     }
     & li {
         list-style-type: none;
@@ -320,6 +329,12 @@ footer {
         transition: padding-right 450ms ease-in-out;
         &:hover {
         padding-right: 60px;
+        }
+        &:hover .circle {
+            transform: rotate(360deg);
+        }
+        @include desktop {
+            width: 30%;
         }
         & .menu__price {
             font-weight: bold;
@@ -362,10 +377,13 @@ footer {
             padding: 32px 20px;
             height: 18px;
             width: 21px;
-            top: -40px;
-            right: -60px;
+            top: -39px;
+            right: -61px;
             margin-bottom: -42px;
             background-color: #99E2D0;
+        }
+        .circle {
+            transition: transform 500ms ease-in-out;
         }
     }
     &__title {
@@ -381,30 +399,5 @@ footer {
         @include button;
         box-shadow: $shadow;
         cursor: pointer;
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* sur Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* sur Safari et Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
     }
 }

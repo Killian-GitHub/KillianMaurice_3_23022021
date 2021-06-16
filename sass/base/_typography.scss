@@ -8,7 +8,7 @@ $font-secondary: 'shrikhand', sans-serif;
 // Elements
 p {
     font-family: $font-primary;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .menu__title {
@@ -31,7 +31,7 @@ p {
 .footer__text {
     font-family: $font-primary;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .guide {
@@ -51,11 +51,16 @@ h1 {
 h2 {
     font-family: $font-primary;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 h3 {
     font-family: $font-primary;
     font-weight: bold;
     font-size: 18px;
+}
+
+h4 {
+    font-family: $font-secondary;
+    font-weight: 100;
 }

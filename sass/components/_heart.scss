@@ -10,6 +10,10 @@
     position: relative;
     overflow: hidden;
     clip-path: url(#svgPath);
+    clip-path: url(#svgPath1);
+    clip-path: url(#svgPath2);
+    clip-path: url(#svgPath3);
+    clip-path: url(#svgPath4);
     &:hover {
        &::before {
           transform: scale(1);

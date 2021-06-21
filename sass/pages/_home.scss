@@ -126,6 +126,11 @@
             margin-bottom: 35px;
         }
     }
+    .link {
+        @include tablet {
+            width: 47%;
+        }
+    }
     figure {
         background-color: #fff;
         margin: 0 auto 20px;
@@ -136,9 +141,6 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        @include tablet {
-            width: 47%;
-        }
         figcaption {
             padding: 10px 10px 0;
             h2 {

@@ -6,4 +6,9 @@
     font-size: 15px;
     padding: 13px 20px 13px;
     text-align: center;
+    opacity: 1;
+    &:hover {
+        animation: darken 200ms forwards;
+        box-shadow: 4px 4px 6px rgb(141, 139, 139);
+    }
 }
